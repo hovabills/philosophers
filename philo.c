@@ -78,7 +78,6 @@ void	exit_sim(t_table *table, t_philo *philos)
 int	start_sim(t_table *table)
 {
 	int		i;
-	t_philo	*philo;
 
 	i = 0;
 	table->start_time = timestamp();

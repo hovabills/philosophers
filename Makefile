@@ -1,6 +1,6 @@
 CC=cc
 NAME=philo
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 HEADER = philo.h
 INCLUDE	= -lpthread
 
@@ -8,10 +8,10 @@ SRCS := philo.c philo_init.c utils.c
 OBJS := $(SRCS:.c=.o)
 
 $(NAME): $(OBJS)
-	$(CC) $(INCLUDE)  -o $(NAME) $(OBJS)
+	$(CC) $(INCLUDE) -o $(NAME) $(OBJS)
 
 %.o: %.c $(HEADER)
-	$(CC) -c $< -o  
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all:	$(NAME)
 
